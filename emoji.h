@@ -1,9 +1,9 @@
-#include <map>
+#include <unordered_map>
 #include <string>
 
 namespace emojicpp {
 
-    static std::map<std::string, std::string> EMOJIS = {
+    static std::unordered_map<std::string, std::string> EMOJIS = {
         {":admission_tickets:" , u8"\U0001F39F"},
         {":aerial_tramway:" , u8"\U0001F6A1"},
         {":airplane:" , u8"\U00002708"},
@@ -1070,7 +1070,7 @@ namespace emojicpp {
                         index = i;
                         continue;
                     }
-                    std::map<std::string, std::string>::iterator it;
+                    std::unordered_map<std::string, std::string>::iterator it;
                     it = EMOJIS.find(s.substr(index, i - index + 1));
                     if (it == EMOJIS.end()) {
                         index = i;
